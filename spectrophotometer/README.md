@@ -20,7 +20,7 @@ Streaming sends a raw integer ADC line every 50 ms (plus execution overhead), by
 
 ## Notebook map and calibration versions
 
-* `Spectrophotometer App.ipynb`: retained from `_118090.ipynb`. The `_114159.ipynb` variant has **identical cell sources**; differences are saved notebook state/output, not additional implemented functionality. Both include the fit and Bokeh streaming application; the larger version preserves more saved artifact content. The stray unnumbered notebook was absent from the download directory when checked.
+* `Spectrophotometer App.ipynb`: calibration fit plus the Bokeh streaming application.
 * The fit cells regress OD against `-log10(V_sample)` for 15 embedded standards, retaining positive voltages. Saved output gives slope 0.8789, intercept 0.3209 and R² = 0.9811, matching the Arduino formula.
 * The live app instead uses `CALIB_SLOPE = 1.0022` and `CALIB_INTERCEPT = 0.3013`. Thus it does **not** reproduce the firmware/fit-cell calibration despite the report describing a common calibration. It converts 10-bit ADC codes with a 5 V reference and floors voltage at 1e-9 before the log.
 * Bokeh provides connect/disconnect (`S`/`X`), a host polling interval (default 50 ms, minimum 20 ms), timestamp bookmarks and CSV export for both full stream and bookmarks. Changing the host callback interval does not change the firmware's 50 ms delay. The included update function does not smooth the OD stream, despite smoothing language in the report.
