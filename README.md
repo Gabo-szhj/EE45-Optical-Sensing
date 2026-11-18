@@ -8,4 +8,4 @@ Three independent Caltech projects, collected under EE45:
 
 The gesture report is dated 12 June 2025. The other two supplied write-ups label their course **BE/EE/MedE 189a**; the directory grouping does not override those original titles. Each project README distinguishes supplied executable artifacts from designs/results described only in a report. Original notebooks retain saved outputs; they were not re-executed here. Measurement CSVs, trained weights and dependency lockfiles were not supplied. Hardware operation was not tested.
 
-HTML notebook exports were omitted in favor of the corresponding notebooks. Reports are Ghostscript `/ebook` compressed copies of the originals retained in the download directory. PDF-derived figures are downscaled PNGs; consult the PDFs for full context. No remote changes were made.
+HTML notebook exports were omitted in favor of the corresponding notebooks. Reports are compressed copies of the originals. PDF-derived figures are downscaled PNGs; consult the PDFs for full context.
